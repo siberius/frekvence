@@ -10,3 +10,4 @@
 - Published the original application code and documentation under MIT; retained third-party notices
 - Select Czech for a Czech primary browser language and English otherwise on first use; preserve manual preferences
 - Mobile Safari: narrow-screen header, dynamic dialog heights, landscape sizing and updated iOS home-screen instructions in both languages.
+- Refined wave icon with vector sources, a dedicated Android maskable variant, an opaque iPhone icon and a simplified small favicon

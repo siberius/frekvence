@@ -73,3 +73,5 @@ Repository: [siberius/frekvence](https://github.com/siberius/frekvence)
 The layout adapts to phones and tablets in portrait and landscape, including safe areas and Safari's changing browser-bar height. Open **Menu → Install on home screen** for installation. On iPhone/iPad, follow Safari's Share → Add to Home Screen flow and leave Open as Web App enabled when offered. Supported Android browsers use their native install prompt when available; otherwise the menu provides manual steps. The install entry is hidden when launched from the home screen.
 
 See [Apple's installation instructions](https://support.apple.com/guide/iphone/iphea86e5236/ios). Offline use requires a first successful load over HTTPS (or localhost) and the Ready offline status. Physical-device installation remains a manual release check.
+
+App icons are maintained as SVG sources in `icons/`; PNG exports include a dedicated Android maskable icon and a 180 px Apple touch icon.

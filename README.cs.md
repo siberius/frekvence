@@ -78,3 +78,5 @@ Repozitář: [siberius/frekvence](https://github.com/siberius/frekvence)
 Rozložení se přizpůsobuje telefonu i tabletu na výšku a na šířku, bezpečným okrajům displeje i proměnlivé výšce lišt Safari. Instalaci najdeš v **Menu → Instalovat na plochu**. Na iPhonu a iPadu pokračuj v Safari přes Sdílet → Přidat na plochu a ponech zapnuté Otevřít jako webovou aplikaci, pokud se tato volba nabízí. Podporované prohlížeče Androidu otevřou dostupnou systémovou výzvu, jinak aplikace zobrazí ruční postup. Při spuštění z plochy se nabídka instalace skryje.
 
 Podrobnosti uvádí [návod Applu](https://support.apple.com/guide/iphone/iphea86e5236/ios). Offline použití vyžaduje první úspěšné načtení přes HTTPS (nebo localhost) a stav Připraveno bez internetu. Instalaci na fyzickém telefonu je nutné ověřit ručně.
+
+Ikony mají vektorové zdroje SVG v `icons/`, samostatnou variantu pro ořez Androidu a neprůhlednou 180px ikonu pro iPhone.
