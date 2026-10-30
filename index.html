@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#091423"><meta name="description" content="Prozkoumej frekvenci: propojený 3D model vlnění, časový graf a polární fázor pro střední školy.">
+<title>Frekvence: laboratoř vlnění</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Frekvence">
+<link rel="stylesheet" href="style.css">
+<script defer src="vendor/three.min.js"></script><script defer src="vendor/OrbitControls.js"></script><script defer src="physics.js"></script><script defer src="translations.js"></script><script defer src="i18n.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="./" aria-label="Frekvence, úvod"><span class="brand-mark">f</span><span>Frekvence<small>Laboratoř vlnění</small></span></a><div class="header-actions"><button id="language-button" type="button" aria-label="Switch to English" title="Switch to English" lang="en">EN</button><span class="level">Fyzika pro SŠ</span><button id="menu-button" aria-expanded="false" aria-controls="menu">Menu</button></div><nav id="menu" hidden aria-label="Menu aplikace"><button id="install">Instalovat na plochu</button><button id="export">Uložit 3D pohled jako PNG</button><button id="copy">Kopírovat rovnici</button><button id="help">Jak s laboratoří pracovat</button><button id="reset">Obnovit výchozí nastavení</button><span id="offline-status">Příprava offline režimu…</span></nav></header>
+<main>
+<section class="intro"><div><h1>Jeden kmit<br><em>Celý svět vln</em></h1><p>Měň frekvenci a sleduj stejný děj třemi pohledy.</p></div><div class="intro-note"><span class="probe-key">Sleduj oranžový bod</span><p id="intro-probe">V prostoru kmitá. V grafu píše svůj příběh. Na kružnici jeho fáze oběhne jednu otáčku.</p><a href="#diagrams">Propojit všechny pohledy</a></div></section>
+<div class="modebar" role="group" aria-label="Druh vlnění"><button data-mode="transverse" aria-pressed="true">Vlna na struně</button><button data-mode="sound" aria-pressed="false">Zvuk ve vzduchu</button><button data-mode="em" aria-pressed="false">Elektromagnetická vlna</button></div>
+<div class="workspace">
+<div class="visuals">
+<section class="stage-panel" aria-labelledby="space-title"><div class="panel-top"><div><span class="view-number">01</span><h2 id="space-title">Vlna v prostoru</h2></div><span id="mode-caption">Příčné mechanické vlnění</span></div>
+<div id="em-views" class="em-views" hidden><div role="group" aria-label="Způsob zobrazení elektromagnetické vlny"><button data-em-view="linear" aria-pressed="true">Lineární polarizace</button><button data-em-view="circular" aria-pressed="false">Šroubovice</button><button data-em-view="wavefronts" aria-pressed="false">Kulové vlnoplochy</button></div><button id="em-explanation" class="text-button">Co tyto tvary znamenají?</button></div>
+<div id="stage" tabindex="0" role="img" aria-label="Interaktivní 3D vlna. Táhnutím otočíte kameru, kolečkem přiblížíte. Klávesami šipek otočíte pohled, plus a minus přiblížíte."><div id="fallback" hidden>3D vykreslování není dostupné. Časový graf a polární pohled níže zůstávají funkční.</div><div class="stage-legend"><span class="wave-key" id="wave-legend">Výchylka struny</span><span class="field-key" id="field-legend" hidden>Magnetické pole B</span></div><div class="stage-bottom"><span id="stage-hint">Táhni a otoč prostor</span><div role="group" aria-label="Pohled kamery"><button data-view="3d" aria-pressed="true">3D</button><button data-view="front" aria-pressed="false">Zepředu</button><button data-view="top" aria-pressed="false">Shora</button></div></div></div>
+<div class="transport"><button id="play" class="primary">Pozastavit</button><button id="step" title="Pozastaví děj a posune čas o osminu periody">Krok T/8</button><label class="speed"><input type="checkbox" id="slow"> Zpomalit ještě 4×</label><output id="clock">t = 0,00 s</output></div>
+<p class="stage-note" id="physical-note">Oranžová částice kmitá na místě. Vlna přenáší energii směrem doprava.</p>
+</section>
+<div class="diagrams" id="diagrams">
+<section class="diagram" aria-labelledby="time-title"><div class="panel-top"><div><span class="view-number">02</span><h2 id="time-title">Kmit v čase</h2></div><span>Kartézský pohled</span></div><canvas id="time-canvas" role="img" aria-label="Časový graf výchylky sledovaného bodu s označenou periodou T."></canvas><p id="time-caption">Jeden celý kmit trvá periodu T.</p></section>
+<section class="diagram" aria-labelledby="polar-title"><div class="panel-top"><div><span class="view-number">03</span><h2 id="polar-title">Kmit jako otáčení</h2></div><span>Polární pohled</span></div><canvas id="polar-canvas" role="img" aria-label="Fázor o poloměru A. Svislý průmět jeho konce je výchylka sledovaného bodu."></canvas><p id="polar-caption">Kružnice je matematická pomůcka. Částice neobíhá po kruhu.</p></section>
+</div>
+</div>
+<aside class="controls" aria-label="Ovládání experimentu"><div class="control-heading"><h2>Co se změní?</h2><p>Začni jediným posuvníkem.</p></div>
+<div class="frequency-control"><label for="frequency">Frekvence <i>f</i><output id="frequency-value">1,0 Hz</output></label><input id="frequency" type="range" min="0.5" max="3" step="0.1" value="1"><div class="range-ends"><span id="f-min">0,5 Hz</span><span id="f-max">3 Hz</span></div><p id="frequency-explanation">1 celý kmit za sekundu.</p></div>
+<div class="metrics"><div><span>Perioda <i>T</i></span><output id="period-value">1,00 s</output><small>Čas jednoho kmitu</small></div><div><span>Vlnová délka <i>λ</i></span><output id="wavelength-value">4,00 m</output><small>Vzdálenost stejné fáze</small></div></div>
+<div class="insight"><h3>Vyšší frekvence</h3><p>Kratší perioda. Kratší vlna.<br>Rychlost v tomto prostředí zůstává stejná.</p></div>
+<details id="advanced"><summary>Další možnosti experimentu</summary><div class="advanced-body">
+<label for="amplitude">Amplituda <i>A</i><output id="amplitude-value"></output></label><input id="amplitude" type="range" min="0.1" max="0.6" step="0.05" value="0.4"><p id="amplitude-note">Větší amplituda nemění frekvenci.</p>
+<label for="phase">Počáteční fáze <i>φ₀</i><output id="phase-value">0°</output></label><input id="phase" type="range" min="0" max="360" step="15" value="0">
+<label for="probe"><span id="probe-label">Sledované místo</span> <i id="probe-symbol">x₀</i><output id="probe-value">4,0 m</output></label><input id="probe" type="range" min="0" max="12" step="0.1" value="4">
+<label for="velocity">Rychlost šíření <i>v</i><output id="velocity-value">4 m/s</output></label><input id="velocity" type="range" min="2" max="6" step="0.5" value="4"><p id="velocity-note">Model struny: změnou rychlosti zkoumáš jiné prostředí.</p>
+<label class="check"><input id="particles" type="checkbox" checked> Zobrazit částice</label><label class="check"><input id="rulers" type="checkbox" checked> Zobrazit měřítka</label><label class="check"><input id="reference" type="checkbox"> Porovnat s nulovou počáteční fází</label>
+</div></details>
+<div class="formula"><span>Všechno do sebe zapadá</span><p><i>v</i> = <i>λ</i> · <i>f</i></p><output id="relationship"></output><button id="equation-button" class="text-button">Rozumět celé rovnici</button></div>
+<p class="rate-note" id="rate-note"></p>
+</aside>
+</div>
+<footer><span>Frekvence: prostor pro pochopení</span><span>Model ideálního harmonického vlnění</span><button id="about" class="text-button">O programu</button></footer>
+</main>
+<dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title"></h2><button id="close-dialog">Zavřít</button></div><div id="dialog-body"></div></dialog><div id="toast" role="status" hidden></div>
+<noscript>Tato interaktivní laboratoř potřebuje JavaScript. Povol jej v nastavení prohlížeče. / This interactive laboratory requires JavaScript.</noscript>
+</body></html>
