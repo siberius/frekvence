@@ -5,6 +5,8 @@
 > 🚀 **Spustit online v prohlížeči:** [https://school.vibemaker.cz/frekvence/](https://school.vibemaker.cz/frekvence/)  
 > *(Běží přímo v prohlížeči · PWA offline · Bez instalace a registrace)*
 
+[![Frekvence — laboratoř vlnění](frekvence.gif)](https://school.vibemaker.cz/frekvence/)
+
 Responzivní SPA pro středoškolskou fyziku. Vstupní soubor je `index.html`.
 
 ## Co nabízí
@@ -77,7 +79,18 @@ Podrobnosti k aktuálnímu ověření: [docs/VERIFICATION.md](docs/VERIFICATION.
 
 ## Licence a autor
 
-Vlastní kód aplikace a dokumentace: [MIT](LICENSE). Copyright © 2026 Luděk Sušický — biolog, středoškolský a vysokoškolský učitel informatických předmětů · [@siberius na GitHubu](https://github.com/siberius). Three.js a OrbitControls si zachovávají původní oznámení v [vendor/LICENSE.txt](vendor/LICENSE.txt).
+Vlastní kód aplikace a dokumentace: [MIT](LICENSE). Three.js a OrbitControls si zachovávají původní oznámení v [vendor/LICENSE.txt](vendor/LICENSE.txt).
+
+### Autor
+
+**Luděk Sušický** — biolog, středoškolský a vysokoškolský učitel informatických předmětů
+
+- E-mail: [ludek.susicky@gmail.com](mailto:ludek.susicky@gmail.com)
+- X: [@ludeksusicky](https://x.com/ludeksusicky)
+- LinkedIn: [Luděk Sušický](https://www.linkedin.com/in/ludek-susicky/)
+- GitHub: [@siberius](https://github.com/siberius) — další vzdělávací projekty a otevřené aplikace
+
+Aplikace je příkladem SPA (Single Page Application) v jediném HTML souboru.
 
 Repozitář: [siberius/frekvence](https://github.com/siberius/frekvence)
 

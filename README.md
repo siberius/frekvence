@@ -5,6 +5,8 @@
 > 🚀 **Online version / Live web app:** [https://school.vibemaker.cz/frekvence/](https://school.vibemaker.cz/frekvence/)  
 > *(Run directly in your browser · Offline-ready PWA · No registration)*
 
+[![Frequency: wave laboratory](frekvence.gif)](https://school.vibemaker.cz/frekvence/)
+
 An interactive laboratory for secondary-school physics. Explore one wave through a 3D scene, a time graph and a polar phase view. Change frequency while keeping the medium's speed fixed, pause the simulation and advance it by one eighth of a period.
 
 ## Run
@@ -53,11 +55,20 @@ The app uses no accounts or backend and includes no analytics. Language preferen
 
 When changing runtime files, update the cache version in `sw.js` and include new dependencies in `ASSETS`. Translation keys are the Czech source copy; English translations preserve interpolation and formulas. See [verification](docs/VERIFICATION.md).
 
-## Author and license
-
-Copyright © 2026 Luděk Sušický: biologist, secondary-school and university teacher of computing subjects · [@siberius on GitHub](https://github.com/siberius)
+## License and author
 
 Three.js and OrbitControls retain their MIT notice in [vendor/LICENSE.txt](vendor/LICENSE.txt). The original application code and documentation are licensed under [MIT](LICENSE).
+
+### Author
+
+**Luděk Sušický** — biologist, secondary-school and university teacher of computing subjects
+
+- E-mail: [ludek.susicky@gmail.com](mailto:ludek.susicky@gmail.com)
+- X: [@ludeksusicky](https://x.com/ludeksusicky)
+- LinkedIn: [Luděk Sušický](https://www.linkedin.com/in/ludek-susicky/)
+- GitHub: [@siberius](https://github.com/siberius) — more educational projects and open-source applications
+
+The app is an example of an SPA (Single Page Application) in a single HTML file.
 
 ## Scientific references
 
