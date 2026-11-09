@@ -1,5 +1,10 @@
 # Frekvence — laboratoř vlnění
 
+[English](README.md)
+
+> 🚀 **Spustit online v prohlížeči:** [https://school.vibemaker.cz/frekvence/](https://school.vibemaker.cz/frekvence/)  
+> *(Běží přímo v prohlížeči · PWA offline · Bez instalace a registrace)*
+
 Responzivní SPA pro středoškolskou fyziku. Vstupní soubor je `index.html`.
 
 ## Co nabízí
@@ -12,9 +17,12 @@ Responzivní SPA pro středoškolskou fyziku. Vstupní soubor je `index.html`.
 
 ## Spuštění
 
-Z nadřazeného adresáře: `python3 -m http.server 8123`, potom otevřít `http://localhost:8123/frekvence/`.
-Na web nahrát celou složku `frekvence`. Instalace vyžaduje HTTPS (nebo localhost).
-Při otevření samotného HTML ze souborového systému funguje simulace, nikoli PWA instalace.
+Aplikace nepotřebuje sestavení ani instalaci balíčků:
+
+1. **Online:** Otevři [https://school.vibemaker.cz/frekvence/](https://school.vibemaker.cz/frekvence/)
+2. **Offline / Lokálně:** Otevři `index.html` přímo v libovolném moderním prohlížeči (dvojklik stačí).
+
+Přidání na plochu a automatická offline cache fungují při spuštění přes zabezpečené HTTPS.
 
 ## Fyzikální model a měřítka
 
@@ -77,6 +85,6 @@ Repozitář: [siberius/frekvence](https://github.com/siberius/frekvence)
 
 Rozložení se přizpůsobuje telefonu i tabletu na výšku a na šířku, bezpečným okrajům displeje i proměnlivé výšce lišt Safari. Instalaci najdeš v **Menu → Instalovat na plochu**. Na iPhonu a iPadu pokračuj v Safari přes Sdílet → Přidat na plochu a ponech zapnuté Otevřít jako webovou aplikaci, pokud se tato volba nabízí. Podporované prohlížeče Androidu otevřou dostupnou systémovou výzvu, jinak aplikace zobrazí ruční postup. Při spuštění z plochy se nabídka instalace skryje.
 
-Podrobnosti uvádí [návod Applu](https://support.apple.com/guide/iphone/iphea86e5236/ios). Offline použití vyžaduje první úspěšné načtení přes HTTPS (nebo localhost) a stav Připraveno bez internetu. Instalaci na fyzickém telefonu je nutné ověřit ručně.
+Podrobnosti uvádí [návod Applu](https://support.apple.com/guide/iphone/iphea86e5236/ios). Offline použití vyžaduje první úspěšné načtení přes HTTPS a stav Připraveno bez internetu. Instalaci na fyzickém telefonu je nutné ověřit ručně.
 
 Ikony mají vektorové zdroje SVG v `icons/`, samostatnou variantu pro ořez Androidu a neprůhlednou 180px ikonu pro iPhone.
