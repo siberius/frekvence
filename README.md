@@ -57,7 +57,7 @@ When changing runtime files, update the cache version in `sw.js` and include new
 
 ## Author and license
 
-Copyright © 2026 Luděk Sušický
+Copyright © 2026 Luděk Sušický: biologist, secondary-school and university teacher of computing subjects · [@siberius on GitHub](https://github.com/siberius)
 
 Three.js and OrbitControls retain their MIT notice in [vendor/LICENSE.txt](vendor/LICENSE.txt). The original application code and documentation are licensed under [MIT](LICENSE).
 

@@ -67,9 +67,9 @@ Aplikace nemá účty, backend ani analytiku. Místně ukládá jazyk a offline 
 
 Podrobnosti k aktuálnímu ověření: [docs/VERIFICATION.md](docs/VERIFICATION.md).
 
-## Licence
+## Licence a autor
 
-Vlastní kód aplikace a dokumentace: [MIT](LICENSE). Copyright © 2026 Luděk Sušický. Three.js a OrbitControls si zachovávají původní oznámení v [vendor/LICENSE.txt](vendor/LICENSE.txt).
+Vlastní kód aplikace a dokumentace: [MIT](LICENSE). Copyright © 2026 Luděk Sušický — biolog, středoškolský a vysokoškolský učitel informatických předmětů · [@siberius na GitHubu](https://github.com/siberius). Three.js a OrbitControls si zachovávají původní oznámení v [vendor/LICENSE.txt](vendor/LICENSE.txt).
 
 Repozitář: [siberius/frekvence](https://github.com/siberius/frekvence)
 
